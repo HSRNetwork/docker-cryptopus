@@ -1,0 +1,4 @@
+#!/bin/sh
+VER=`curl -sA - https://raw.githubusercontent.com/puzzle/cryptopus/master/VERSION`
+docker tag $DOCKER_REPO $DOCKER_REPO:$VER
+docker push $DOCKER_REPO:$VER
